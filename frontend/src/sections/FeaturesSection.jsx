@@ -11,8 +11,8 @@ const FeaturesSection = () => {
     >
       <SectionTitle
         text1="Features"
-        text2="What you get"
-        text3="Components, patterns and pages — everything you need to ship."
+        text2="Everything you need to create viral thumbnails"
+        text3="AI-powered tools designed to increase clicks, engagement, and growth."
       />
 
       {/* Feature cards */}
@@ -36,13 +36,15 @@ const FeaturesSection = () => {
               mass: 1
             }}
           >
-            <div className="
-              p-6 rounded-2xl space-y-4
-              border border-white/10
-              bg-white/5 backdrop-blur
-              max-w-80 w-full
-              hover:border-pink-500/40 transition
-            ">
+            <div
+              className="
+                p-6 rounded-2xl space-y-4
+                border border-white/10
+                bg-white/5 backdrop-blur
+                max-w-80 w-full
+                hover:border-pink-500/40 transition
+              "
+            >
               {feature.icon}
 
               <h3 className="text-base font-medium text-white">
@@ -69,8 +71,9 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 320, damping: 70, mass: 1 }}
         >
-          PrebuiltUI helps you build faster by transforming your design vision
-          into fully functional, production-ready UI components.
+          Our AI analyzes your content, understands viewer psychology, and
+          generates thumbnails optimized for higher click-through rates — all
+          in seconds.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 mt-10 gap-10">
@@ -85,7 +88,7 @@ const FeaturesSection = () => {
             <img
               className="h-full w-full object-cover"
               src="/assets/features-showcase-1.png"
-              alt="features showcase"
+              alt="AI thumbnail generation showcase"
             />
           </motion.div>
 
@@ -105,7 +108,7 @@ const FeaturesSection = () => {
           >
             <img
               src="/assets/features-showcase-2.png"
-              alt="features showcase"
+              alt="high CTR thumbnail preview"
               className="
                 rounded-xl
                 border border-white/10
@@ -115,21 +118,22 @@ const FeaturesSection = () => {
             />
 
             <h3 className="text-[24px] leading-tight text-white font-medium mt-6">
-              Better design with higher revenue and profits
+              Higher CTR. More Views. Faster Growth.
             </h3>
 
             <p className="text-gray-400 mt-3">
-              PrebuiltUI empowers you to build beautifully and scale effortlessly.
+              Turn impressions into clicks with thumbnails crafted by AI and
+              backed by proven visual patterns.
             </p>
 
             <a
-              href="https://prebuiltui.com"
+              href="#"
               className="
                 group inline-flex items-center gap-2 mt-5
                 text-pink-500 hover:text-pink-400 transition
               "
             >
-              Learn more about the product
+              Explore all features
               <ArrowUpRight className="size-5 group-hover:translate-x-0.5 transition" />
             </a>
           </motion.div>

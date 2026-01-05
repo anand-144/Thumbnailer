@@ -4,9 +4,9 @@ import { motion } from "motion/react";
 
 const HeroSection = () => {
   const specialFeatures = [
-    "No credit card",
-    "30 days free trial",
-    "Setup in 10 minutes"
+    "No design skills required",
+    "Instant AI thumbnail generation",
+    "High-CTR YouTube-ready designs",
   ];
 
   return (
@@ -16,7 +16,7 @@ const HeroSection = () => {
 
       {/* Announcement */}
       <motion.a
-        href="https://prebuiltui.com?utm_source=pixels"
+        href="#"
         className="
           group flex items-center gap-2
           rounded-full p-1 pr-3 mt-44
@@ -39,7 +39,7 @@ const HeroSection = () => {
           NEW
         </span>
         <p className="flex items-center gap-1 text-sm">
-          <span>Try 30 days free trial option</span>
+          <span>Create AI Thumbnails for Your Videos — Free</span>
           <ChevronRightIcon
             size={16}
             className="group-hover:translate-x-0.5 transition"
@@ -59,9 +59,9 @@ const HeroSection = () => {
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 240, damping: 70, mass: 1 }}
       >
-        Free template to start your{" "}
-        <span className="move-gradient px-3 rounded-xl text-nowrap">
-          Next.js site.
+        <span className="text-rose-500">AI-Powered Thumbnail Creator</span> for{" "}
+        <span className="move-gradient px-3 rounded-xl text-nowrap text-pink-500">
+          Your Videos
         </span>
       </motion.h1>
 
@@ -79,8 +79,8 @@ const HeroSection = () => {
           mass: 1
         }}
       >
-        No complexity. No noise. Just clean, reliable automation to boost your
-        team’s efficiency.
+        Create scroll-stopping YouTube thumbnails in seconds using AI.
+        No design skills. Just more clicks.
       </motion.p>
 
       {/* CTA Buttons */}
@@ -99,7 +99,7 @@ const HeroSection = () => {
             active:scale-95 transition
           "
         >
-          Get started
+          Generate Thumbnail
         </button>
 
         <button
@@ -112,7 +112,7 @@ const HeroSection = () => {
           "
         >
           <VideoIcon strokeWidth={1} />
-          <span>Watch demo</span>
+          <span>See How It Works</span>
         </button>
       </motion.div>
 

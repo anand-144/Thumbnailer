@@ -88,7 +88,7 @@ const Navbar = () => {
             <motion.div
               className="fixed right-0 top-0 z-[100]
               h-full w-[80%] max-w-sm
-              bg-black border-l border-white/10
+              bg-black/80 border-l border-white/10
               px-6 py-8 flex flex-col"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
