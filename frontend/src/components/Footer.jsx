@@ -27,7 +27,7 @@ const Footer = () => {
         {/* Logo */}
         <a href="https://prebuiltui.com?utm_source=pixels">
           <img
-            className="size-8 aspect-square"
+            className="size-10 aspect-square"
             src="/assets/footer-logo.svg"
             alt="footer logo"
             width="32"

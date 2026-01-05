@@ -19,13 +19,11 @@ const Navbar = () => {
         transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
       >
         {/* Logo */}
-        <NavLink to="/">
+        <NavLink to="/" className="flex items-center">
           <img
-            className="h-8 w-auto"
+            className="size-10 w-auto"
             src="/assets/logo.svg"
-            alt="logo"
-            width="130"
-            height="34"
+            alt="Thumbailer logo icon"
           />
         </NavLink>
 
@@ -36,10 +34,9 @@ const Navbar = () => {
               key={link.name}
               to={link.href}
               className={({ isActive }) =>
-                `transition ${
-                  isActive
-                    ? "text-pink-500"
-                    : "hover:text-pink-400"
+                `transition ${isActive
+                  ? "text-pink-500"
+                  : "hover:text-pink-400"
                 }`
               }
             >
