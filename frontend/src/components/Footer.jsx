@@ -25,7 +25,7 @@ const Footer = () => {
         transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
       >
         {/* Logo */}
-        <a href="https://prebuiltui.com?utm_source=pixels">
+        <a href="/">
           <img
             className="size-10 aspect-square"
             src="/assets/footer-logo.svg"
