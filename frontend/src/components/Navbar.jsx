@@ -42,8 +42,8 @@ const Navbar = () => {
                 to={link.href}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-pink-500"
-                    : "hover:text-pink-400 transition"
+                    ? "text-rose-500"
+                    : "hover:text-red-600 transition"
                 }
               >
                 {link.name}
@@ -55,7 +55,7 @@ const Navbar = () => {
           <button
             onClick={() => navigate("/login")}
             className="hidden md:block px-6 py-2.5 rounded-full
-            bg-pink-600 hover:bg-pink-700
+            bg-rose-600 hover:bg-red-700
             text-white font-medium transition"
           >
             Get Started
@@ -114,7 +114,7 @@ const Navbar = () => {
                     key={link.name}
                     to={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-gray-300 hover:text-pink-400 transition"
+                    className="text-gray-300 hover:text-rose-400 transition"
                   >
                     {link.name}
                   </NavLink>
@@ -128,7 +128,7 @@ const Navbar = () => {
                   navigate("/login");
                 }}
                 className="mt-auto w-full py-3 rounded-full
-                bg-pink-600 hover:bg-pink-700
+                bg-rose-600 hover:bg-red-700
                 text-white font-semibold"
               >
                 Get Started

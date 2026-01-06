@@ -23,7 +23,7 @@ const ContactSection = () => {
           transition={{ type: "spring", stiffness: 320, damping: 70, mass: 1 }}
         >
           <p className="mb-2 font-medium text-gray-400">Your name</p>
-          <div className="flex items-center gap-2 px-4 rounded-xl border border-white/10 bg-white/5 focus-within:border-pink-500 transition">
+          <div className="flex items-center gap-2 px-4 rounded-xl border border-white/10 bg-white/5 focus-within:border-rose-500 transition">
             <UserIcon className="size-5 text-gray-400" />
             <input
               name="name"
@@ -42,7 +42,7 @@ const ContactSection = () => {
           transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
         >
           <p className="mb-2 font-medium text-gray-400">Email address</p>
-          <div className="flex items-center gap-2 px-4 rounded-xl border border-white/10 bg-white/5 focus-within:border-pink-500 transition">
+          <div className="flex items-center gap-2 px-4 rounded-xl border border-white/10 bg-white/5 focus-within:border-rose-500 transition">
             <MailIcon className="size-5 text-gray-400" />
             <input
               name="email"
@@ -66,14 +66,14 @@ const ContactSection = () => {
             name="message"
             rows={7}
             placeholder="Tell us about your project..."
-            className="resize-none w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 outline-none focus:border-pink-500 placeholder:text-gray-500 text-gray-200 transition"
+            className="resize-none w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 outline-none focus:border-rose-500 placeholder:text-gray-500 text-gray-200 transition"
           />
         </motion.div>
 
         {/* Submit */}
         <motion.button
           type="submit"
-          className="mt-4 w-max flex items-center gap-2 bg-pink-600 hover:bg-pink-700 active:scale-95 transition text-white px-10 py-3 rounded-full shadow-lg shadow-pink-600/20"
+          className="mt-4 w-max flex items-center gap-2 bg-rose-600 hover:bg-red-700 active:scale-95 transition text-white px-10 py-3 rounded-full shadow-lg shadow-rose-600/20"
           initial={{ y: 150, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}

@@ -24,8 +24,8 @@ export const featuresData = [
             y2="26"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#E60076" />
-            <stop offset="1" stopColor="#FB64B6" />
+            <stop stopColor="#FA003F" />
+            <stop offset="1" stopColor="#00BCD4" />
           </linearGradient>
         </defs>
       </svg>
@@ -67,8 +67,8 @@ export const featuresData = [
             y2="22"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#E60076" />
-            <stop offset="1" stopColor="#FB64B6" />
+            <stop stopColor="#00BCD4" />
+            <stop offset="1" stopColor="#00BCD4" />
           </linearGradient>
         </defs>
       </svg>
@@ -112,8 +112,8 @@ export const featuresData = [
             y2="24"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#E60076" />
-            <stop offset="1" stopColor="#FB64B6" />
+            <stop stopColor="#FA003F" />
+            <stop offset="1" stopColor="#00BCD4" />
           </linearGradient>
         </defs>
       </svg>

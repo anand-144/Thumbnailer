@@ -22,7 +22,7 @@ const FeaturesSection = () => {
             key={index}
             className={
               index === 1
-                ? "p-px rounded-2xl bg-gradient-to-br from-pink-500/60 to-transparent"
+                ? "p-px rounded-2xl bg-gradient-to-br from-red-500/60 to-transparent"
                 : ""
             }
             initial={{ y: 150, opacity: 0 }}
@@ -42,7 +42,7 @@ const FeaturesSection = () => {
                 border border-white/10
                 bg-white/5 backdrop-blur
                 max-w-80 w-full
-                hover:border-pink-500/40 transition
+                hover:border-rose-500/40 transition
               "
             >
               {feature.icon}
@@ -62,7 +62,7 @@ const FeaturesSection = () => {
       {/* Showcase section */}
       <div className="mt-40 relative mx-auto max-w-5xl">
         {/* Glow */}
-        <div className="absolute -z-50 size-96 -top-20 -left-32 rounded-full bg-pink-500/20 blur-3xl" />
+        <div className="absolute -z-50 size-96 -top-20 -left-32 rounded-full bg-red-500/20 blur-3xl" />
 
         <motion.p
           className="text-gray-300 text-lg max-w-3xl"
@@ -130,7 +130,7 @@ const FeaturesSection = () => {
               href="#"
               className="
                 group inline-flex items-center gap-2 mt-5
-                text-pink-500 hover:text-pink-400 transition
+                text-red-500 hover:text-rose-400 transition
               "
             >
               Explore all features

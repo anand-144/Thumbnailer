@@ -46,7 +46,7 @@ const Footer = () => {
                 <li key={i}>
                   <Link
                     to={link.href}
-                    className="hover:text-pink-400 transition-colors"
+                    className="hover:text-rose-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -76,7 +76,7 @@ const Footer = () => {
             href="https://dribbble.com/prebuiltui"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-pink-400 transition"
+            className="hover:text-red-400 transition"
           >
             <DribbbleIcon className="size-5" />
           </a>
@@ -84,7 +84,7 @@ const Footer = () => {
             href="https://www.linkedin.com/company/prebuiltui"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-pink-400 transition"
+            className="hover:text-red-400 transition"
           >
             <LinkedinIcon className="size-5" />
           </a>
@@ -92,7 +92,7 @@ const Footer = () => {
             href="https://x.com/prebuiltui"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-pink-400 transition"
+            className="hover:text-red-400 transition"
           >
             <TwitterIcon className="size-5" />
           </a>
@@ -100,7 +100,7 @@ const Footer = () => {
             href="https://www.youtube.com/@prebuiltui"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-pink-400 transition"
+            className="hover:text-red-400 transition"
           >
             <YoutubeIcon className="size-6" />
           </a>
@@ -111,7 +111,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()}{" "}
           <a
             href="https://prebuiltui.com?utm_source=pixels"
-            className="hover:text-pink-400 transition"
+            className="hover:text-red-400 transition"
           >
             PrebuiltUI
           </a>

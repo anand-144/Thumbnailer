@@ -1,18 +1,31 @@
-import { CheckIcon, ChevronRightIcon, VideoIcon } from "lucide-react";
+import { useState, useRef} from "react";
+import { CheckIcon, ChevronRightIcon, VideoIcon, XIcon } from "lucide-react";
 import TiltedImage from "../components/TiltedImage";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+import { useNavigate } from 'react-router-dom'
 
 const HeroSection = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const modalRef = useRef(null);
+
+  const navigate = useNavigate()
+
   const specialFeatures = [
     "No design skills required",
     "Instant AI thumbnail generation",
     "High-CTR YouTube-ready designs",
   ];
 
+  const handleBackdropClick = (e) => {
+    if (modalRef.current && !modalRef.current.contains(e.target)) {
+      setIsVideoOpen(false);
+    }
+  };
+
   return (
     <div className="relative flex flex-col items-center justify-center px-4 md:px-16 lg:px-24 xl:px-32 bg-black overflow-hidden">
       {/* Glow */}
-      <div className="absolute top-32 -z-10 left-1/4 size-72 bg-pink-500/40 blur-[300px]" />
+      <div className="absolute top-32 -z-10 left-1/4 size-72 bg-rose-500/40 blur-[300px]" />
 
       {/* Announcement */}
       <motion.a
@@ -22,7 +35,7 @@ const HeroSection = () => {
           rounded-full p-1 pr-3 mt-44
           bg-white/5 border border-white/10
           text-gray-300
-          hover:border-pink-500/40 transition
+          hover:border-rose-500/40 transition
         "
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -35,7 +48,7 @@ const HeroSection = () => {
           mass: 1
         }}
       >
-        <span className="bg-pink-600 text-white text-xs px-3.5 py-1 rounded-full">
+        <span className="bg-red-600 text-white text-xs px-3.5 py-1 rounded-full">
           NEW
         </span>
         <p className="flex items-center gap-1 text-sm">
@@ -60,7 +73,7 @@ const HeroSection = () => {
         transition={{ type: "spring", stiffness: 240, damping: 70, mass: 1 }}
       >
         <span className="text-rose-500">AI-Powered Thumbnail Creator</span> for{" "}
-        <span className="move-gradient px-3 rounded-xl text-nowrap text-pink-500">
+        <span className="move-gradient px-3 rounded-xl text-nowrap text-red-600">
           Your Videos
         </span>
       </motion.h1>
@@ -92,10 +105,11 @@ const HeroSection = () => {
         transition={{ type: "spring", stiffness: 320, damping: 70, mass: 1 }}
       >
         <button
+        onClick={() => navigate('/generate')}
           className="
-            bg-pink-600 hover:bg-pink-700
+            bg-rose-600 hover:bg-red-700
             text-white rounded-full px-7 h-11
-            shadow-lg shadow-pink-600/30
+            shadow-lg shadow-red-600/30
             active:scale-95 transition
           "
         >
@@ -103,6 +117,7 @@ const HeroSection = () => {
         </button>
 
         <button
+          onClick={() => setIsVideoOpen(true)}
           className="
             flex items-center gap-2
             border border-white/10
@@ -127,7 +142,7 @@ const HeroSection = () => {
             viewport={{ once: true }}
             transition={{ delay: index * 0.2, duration: 0.3 }}
           >
-            <CheckIcon className="size-5 text-pink-500" />
+            <CheckIcon className="size-5 text-rose-500" />
             <span className="text-gray-400">{feature}</span>
           </motion.p>
         ))}
@@ -135,6 +150,47 @@ const HeroSection = () => {
 
       {/* Visual */}
       <TiltedImage />
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={handleBackdropClick}
+          >
+            <motion.div
+              ref={modalRef}
+              className="relative w-full max-w-3xl mx-4 bg-black rounded-2xl overflow-hidden border border-white/10"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsVideoOpen(false)}
+                className="absolute top-4 right-4 z-10 text-gray-300 hover:text-white transition"
+              >
+                <XIcon size={22} />
+              </button>
+
+              {/* Video */}
+              <div className="aspect-video">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                  title="How it works"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

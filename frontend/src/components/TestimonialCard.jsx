@@ -5,9 +5,9 @@ const TestimonialCard = ({ testimonial, index }) => {
     <motion.div
       className="
         p-5 mx-4 w-72 shrink-0 rounded-xl
-        bg-pink-950/20 border border-pink-900/40
+        bg-rose-950/20 border border-rose-900/40
         backdrop-blur-md
-        hover:border-pink-700/60
+        hover:border-red-700/60
         transition-colors
       "
       initial={{ y: 150, opacity: 0 }}

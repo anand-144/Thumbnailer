@@ -23,7 +23,7 @@ const CTASection = () => {
           className="
             text-3xl md:text-[46px] md:leading-[1.5]
             font-semibold
-            bg-gradient-to-r from-white to-pink-400
+            bg-gradient-to-r from-red-200 to-rose-800
             text-transparent bg-clip-text
           "
           initial={{ y: 80, opacity: 0 }}
@@ -49,9 +49,9 @@ const CTASection = () => {
       <motion.button
         className="
           px-12 py-3 rounded-full text-sm font-medium
-          bg-pink-600 hover:bg-pink-700
+          bg-rose-600 hover:bg-red-700
           text-white
-          shadow-lg shadow-pink-600/30
+          shadow-lg shadow-red-600/30
           active:scale-95 transition
         "
         initial={{ y: 80, opacity: 0 }}

@@ -60,17 +60,16 @@ const TiltedImage = ({ rotateAmplitude = 3 }) => {
       }}
     >
       <motion.div
-        className="relative w-full transform-style-preserve-3d"
+        className="relative w-full transform-3d max-w-4xl"
         style={{ rotateX, rotateY }}
       >
         <motion.img
-          src="/assets/hero-section-showcase.png"
+          src="/assets/hero-img.png"
           alt="hero section showcase"
-          className="
-            w-full rounded-[16px]
+          className="border-b bg-linear-180 from-rose-500 to-transparent p-1
+            w-full rounded-[15px]
             will-change-transform
-            select-none
-            pointer-events-none
+            transform-[translateZ(0)]
           "
           draggable={false}
         />
