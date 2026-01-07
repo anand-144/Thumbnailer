@@ -1,4 +1,4 @@
-import { MenuIcon, XIcon } from "lucide-react";
+import { MenuIcon, XIcon, ChevronDownIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { navlinks } from "../data/navlinks";
@@ -6,7 +6,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openProfile, setOpenProfile] = useState(false);
   const navigate = useNavigate();
+
+  // 🔐 Simple auth check
+  const isLoggedIn = Boolean(localStorage.getItem("token"));
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -22,14 +26,15 @@ const Navbar = () => {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <div className="flex items-center justify-between
-        px-4 py-4 sm:px-6 md:px-16 lg:px-24 xl:px-32">
-
+        <div
+          className="flex items-center justify-between
+          px-4 py-4 sm:px-6 md:px-16 lg:px-24 xl:px-32"
+        >
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
             <img
               src="/assets/logo.svg"
-              alt="Thumbailer logo"
+              alt="Thumbnailer logo"
               className="h-9 w-auto"
             />
           </NavLink>
@@ -43,7 +48,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "text-rose-500"
-                    : "hover:text-red-600 transition"
+                    : "hover:text-rose-400 transition"
                 }
               >
                 {link.name}
@@ -51,15 +56,61 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <button
-            onClick={() => navigate("/login")}
-            className="hidden md:block px-6 py-2.5 rounded-full
-            bg-rose-600 hover:bg-red-700
-            text-white font-medium transition"
-          >
-            Get Started
-          </button>
+          {/* Desktop Right Section */}
+          <div className="hidden md:flex items-center gap-6 relative">
+            {isLoggedIn ? (
+              <div className="relative">
+                <button
+                  onClick={() => setOpenProfile(!openProfile)}
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition"
+                >
+                  Account
+                  <ChevronDownIcon size={18} />
+                </button>
+
+                <AnimatePresence>
+                  {openProfile && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute right-0 mt-3 w-48 rounded-xl text-rose-500
+                      bg-black/90 border border-white/10 backdrop-blur-md
+                      shadow-lg overflow-hidden"
+                    >
+                      <NavLink
+                        to="/my-generations"
+                        onClick={() => setOpenProfile(false)}
+                        className="block px-4 py-3 text-sm hover:bg-white/10 transition"
+                      >
+                        My Generations
+                      </NavLink>
+
+                      <button
+                        onClick={() => {
+                          localStorage.removeItem("token");
+                          window.location.reload();
+                        }}
+                        className="w-full text-left px-4 py-3 text-sm
+                        hover:bg-white/10 text-red-400 transition"
+                      >
+                        Logout
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ) : (
+              <button
+                onClick={() => navigate("/login")}
+                className="px-6 py-2.5 rounded-full
+                bg-rose-600 hover:bg-red-700
+                text-white font-medium transition"
+              >
+                Get Started
+              </button>
+            )}
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -99,7 +150,7 @@ const Navbar = () => {
               <div className="flex items-center justify-between mb-10">
                 <img
                   src="/assets/logo.svg"
-                  alt="logo"
+                  alt="Thumbnailer logo"
                   className="h-8"
                 />
                 <button onClick={() => setIsOpen(false)}>
@@ -119,20 +170,32 @@ const Navbar = () => {
                     {link.name}
                   </NavLink>
                 ))}
+
+                {isLoggedIn && (
+                  <NavLink
+                    to="/my-generations"
+                    onClick={() => setIsOpen(false)}
+                    className="text-gray-300 hover:text-rose-400 transition"
+                  >
+                    My Generations
+                  </NavLink>
+                )}
               </div>
 
               {/* Mobile CTA */}
-              <button
-                onClick={() => {
-                  setIsOpen(false);
-                  navigate("/login");
-                }}
-                className="mt-auto w-full py-3 rounded-full
-                bg-rose-600 hover:bg-red-700
-                text-white font-semibold"
-              >
-                Get Started
-              </button>
+              {!isLoggedIn && (
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    navigate("/login");
+                  }}
+                  className="mt-auto w-full py-3 rounded-full
+                  bg-rose-600 hover:bg-red-700
+                  text-white font-semibold"
+                >
+                  Get Started
+                </button>
+              )}
             </motion.div>
           </>
         )}

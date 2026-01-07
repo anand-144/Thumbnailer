@@ -11,6 +11,7 @@ import HowItWorks from "./pages/HowItWorks";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import ScrollToHash from "./components/ScrollToHash";
+import About from "./pages/About";
 // import Generate from "./pages/Generate"; // if exists
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/about" element={<About />} />
         {/* <Route path="/generate" element={<Generate />} /> */}
       </Routes>
 
