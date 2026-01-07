@@ -12,7 +12,12 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import ScrollToHash from "./components/ScrollToHash";
 import About from "./pages/About";
-// import Generate from "./pages/Generate"; // if exists
+import Genrate from "./pages/Genrate";
+import MyGeneartion from "./pages/MyGeneartion";
+import Preview from "./pages/Preview";
+import Login from "./components/Login";
+
+
 
 function App() {
   return (
@@ -29,7 +34,11 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/generate" element={<Generate />} /> */}
+        <Route path="/generate/:id" element={<Genrate />} />
+        <Route path="/my-generation" element={<MyGeneartion />} />
+        <Route path="/preview" element={<Preview/>} />
+
+        <Route path="/login" element={<Login/>} />
       </Routes>
 
       <Footer />

@@ -79,7 +79,7 @@ const Navbar = () => {
                       shadow-lg overflow-hidden"
                     >
                       <NavLink
-                        to="/my-generations"
+                        to="/my-generation"
                         onClick={() => setOpenProfile(false)}
                         className="block px-4 py-3 text-sm hover:bg-white/10 transition"
                       >
