@@ -71,9 +71,7 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 320, damping: 70, mass: 1 }}
         >
-          Our AI analyzes your content, understands viewer psychology, and
-          generates thumbnails optimized for higher click-through rates — all
-          in seconds.
+          Our AI understands what makes a video go viral and designs thumbnails accordingly.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 mt-10 gap-10">
@@ -127,7 +125,7 @@ const FeaturesSection = () => {
             </p>
 
             <a
-              href="#"
+              href="/genrate"
               className="
                 group inline-flex items-center gap-2 mt-5
                 text-red-500 hover:text-rose-400 transition

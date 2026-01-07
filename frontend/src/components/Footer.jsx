@@ -11,10 +11,13 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      className="mt-40 py-10 px-6 md:px-16 lg:px-24 xl:px-32
-      bg-black border-t border-white/10
-      text-[13px] text-gray-400
-      flex flex-wrap justify-center md:justify-between gap-10 md:gap-20 overflow-hidden"
+      className="
+        mt-40 py-10 px-6 md:px-16 lg:px-24 xl:px-32
+        bg-black border-t border-white/10
+        text-[13px] text-gray-400
+        flex flex-wrap justify-center md:justify-between
+        gap-10 md:gap-20 overflow-hidden
+      "
     >
       {/* Left Section */}
       <motion.div
@@ -22,18 +25,18 @@ const Footer = () => {
         initial={{ x: -150, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
+        transition={{ type: "spring", stiffness: 280, damping: 70 }}
       >
         {/* Logo */}
-        <a href="/">
+        <Link to="/">
           <img
             className="size-10 aspect-square"
             src="/assets/footer-logo.svg"
-            alt="footer logo"
+            alt="Thumbnailer logo"
             width="32"
             height="32"
           />
-        </a>
+        </Link>
 
         {/* Footer Links */}
         {footerData.map((section, index) => (
@@ -59,49 +62,31 @@ const Footer = () => {
 
       {/* Right Section */}
       <motion.div
-        className="flex flex-col items-end gap-3
-        max-md:items-center max-md:text-center"
+        className="
+          flex flex-col items-end gap-3
+          max-md:items-center max-md:text-center
+        "
         initial={{ x: 150, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
+        transition={{ type: "spring", stiffness: 280, damping: 70 }}
       >
         <p className="max-w-60 text-gray-400">
-          Making every customer feel valued—no matter the size of your audience.
+          AI-powered thumbnails built to boost clicks, views, and engagement.
         </p>
 
         {/* Social Icons */}
         <div className="flex items-center gap-4 mt-3">
-          <a
-            href="https://dribbble.com/prebuiltui"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-red-400 transition"
-          >
+          <a href="#" aria-label="Dribbble" className="hover:text-rose-400 transition">
             <DribbbleIcon className="size-5" />
           </a>
-          <a
-            href="https://www.linkedin.com/company/prebuiltui"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-red-400 transition"
-          >
+          <a href="#" aria-label="LinkedIn" className="hover:text-rose-400 transition">
             <LinkedinIcon className="size-5" />
           </a>
-          <a
-            href="https://x.com/prebuiltui"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-red-400 transition"
-          >
+          <a href="#" aria-label="Twitter" className="hover:text-rose-400 transition">
             <TwitterIcon className="size-5" />
           </a>
-          <a
-            href="https://www.youtube.com/@prebuiltui"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-red-400 transition"
-          >
+          <a href="#" aria-label="YouTube" className="hover:text-rose-400 transition">
             <YoutubeIcon className="size-6" />
           </a>
         </div>
@@ -109,12 +94,7 @@ const Footer = () => {
         {/* Copyright */}
         <p className="mt-4 text-gray-500 text-center">
           &copy; {new Date().getFullYear()}{" "}
-          <a
-            href="https://prebuiltui.com?utm_source=pixels"
-            className="hover:text-red-400 transition"
-          >
-            PrebuiltUI
-          </a>
+          <span className="text-gray-400">Thumbnailer</span>. All rights reserved.
         </p>
       </motion.div>
     </footer>

@@ -2,27 +2,24 @@ export const footerData = [
   {
     title: "Product",
     links: [
-      { name: "Home", href: "#" },
-      { name: "Support", href: "#support" },
-      { name: "Pricing", href: "#pricing" },
-      { name: "Affiliate", href: "#affiliate" },
+      { name: "Home", href: "/" },
+      { name: "Generate", href: "/generate" },
+      { name: "Pricing", href: "/#pricing" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { name: "Company", href: "#company" },
-      { name: "Blogs", href: "#blogs" },
-      { name: "Community", href: "#community" },
-      { name: "Careers", href: "#careers" },
-      { name: "About", href: "#about" },
+      { name: "How it works", href: "/how-it-works" },
+      { name: "FAQs", href: "/faq" },
+      { name: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { name: "Privacy", href: "#privacy" },
-      { name: "Terms", href: "#terms" },
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
     ],
   },
 ];

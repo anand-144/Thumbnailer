@@ -118,8 +118,8 @@ export const featuresData = [
         </defs>
       </svg>
     ),
-    title: "YouTube-ready exports",
+    title: "Multi-platform ready exports",
     description:
-      "Download thumbnails perfectly sized and optimized for YouTube.",
+      "Download thumbnails perfectly sized for YouTube, Shorts, Reels, TikTok, and more.",
   },
 ];

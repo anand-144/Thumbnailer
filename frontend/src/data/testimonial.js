@@ -6,7 +6,7 @@ export const testimonialsData = [
     handle: "@sophiacodes",
     date: "February 14, 2025",
     quote:
-      "This SaaS app has completely streamlined our onboarding process. What used to take hours now takes minutes!",
+      "This AI thumbnail tool boosted my click-through rate instantly. I can create eye-catching thumbnails in seconds without any design skills.",
   },
   {
     image:
@@ -15,7 +15,7 @@ export const testimonialsData = [
     handle: "@ethanwrites",
     date: "March 3, 2025",
     quote:
-      "We’ve tried several tools, but nothing comes close in terms of speed and simplicity. Absolute game-changer.",
+      "I used to spend hours designing thumbnails. Now it’s done in under a minute. Clean, bold, and perfectly optimized for YouTube.",
   },
   {
     image:
@@ -24,7 +24,7 @@ export const testimonialsData = [
     handle: "@mayapatel",
     date: "April 22, 2025",
     quote:
-      "The automation features alone have saved our team countless hours every week. Worth every penny.",
+      "The AI understands exactly what grabs attention. Every thumbnail looks professional and high-converting. Total game changer for creators.",
   },
   {
     image:
@@ -33,6 +33,6 @@ export const testimonialsData = [
     handle: "@liambrooks",
     date: "May 18, 2025",
     quote:
-      "Setup was ridiculously easy. Within 10 minutes, we were running live and onboarding our first customers.",
+      "Perfect for creators who hate design but love results. My videos finally look clickable and premium.",
   },
 ];
