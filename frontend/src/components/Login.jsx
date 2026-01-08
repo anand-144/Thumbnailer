@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import Glow from "./Glow";
+
 
 const Login = () => {
   const [state, setState] = useState("login"); // login | register
@@ -99,7 +99,6 @@ const Login = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
-      <Glow />
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md bg-red-500/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-10 text-center shadow-xl"
