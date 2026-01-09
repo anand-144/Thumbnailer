@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import AspectRatio from "../components/AspectRatio";
+import StyleSelector from "../components/StyleSelector";
 import { colorSchemes } from "../assets/assets";
 
 const Genrate = () => {
@@ -14,6 +15,7 @@ const Genrate = () => {
   const [aspectRatio, setAspectRatio] = useState("16:9");
   const [colorSchemeId, setColorSchemeId] = useState(colorSchemes[0].id);
   const [style, setStyle] = useState("Bold & Graphic");
+    const [styleDropdownOpen, setStyleDropdownOpen] = useState(false);
 
   return (
     <div className="pt-24 min-h-screen">
@@ -57,6 +59,11 @@ const Genrate = () => {
               {/* ASPECT RATIO */}
               <AspectRatio value={aspectRatio} onChange={setAspectRatio} />
 
+              {/* Style Selector */}
+              <StyleSelector value={style} onChange={setStyle} isOpen={styleDropdownOpen} setIsOpen={setStyleDropdownOpen}/>
+
+              {/* Color Scheme Selector */}
+
               {/* ADDITIONAL PROMPT */}
               <div className="space-y-2">
                 <label className="block text-md font-medium text-white">
@@ -87,7 +94,7 @@ const Genrate = () => {
           </div>
 
           {/* RIGHT PREVIEW */}
-          <div className="hidden lg:block rounded-2xl border border-white/10 bg-white/5" />
+          {/* <div className="hidden lg:block rounded-2xl border border-white/10 bg-white/5" /> */}
         </div>
       </main>
     </div>
