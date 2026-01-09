@@ -4,6 +4,7 @@ import AspectRatio from "../components/AspectRatio";
 import StyleSelector from "../components/StyleSelector";
 import { colorSchemes } from "../assets/assets";
 import ColorSchemeSelector from "../components/ColorSchemeSelector";
+import PreviewPanel from "../components/PreviewPanel";
 
 const Genrate = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const Genrate = () => {
   const [aspectRatio, setAspectRatio] = useState("16:9");
   const [colorSchemeId, setColorSchemeId] = useState(colorSchemes[0].id);
   const [style, setStyle] = useState("Bold & Graphic");
-    const [styleDropdownOpen, setStyleDropdownOpen] = useState(false);
+  const [styleDropdownOpen, setStyleDropdownOpen] = useState(false);
 
   return (
     <div className="pt-24 min-h-screen">
@@ -61,10 +62,10 @@ const Genrate = () => {
               <AspectRatio value={aspectRatio} onChange={setAspectRatio} />
 
               {/* Style Selector */}
-              <StyleSelector value={style} onChange={setStyle} isOpen={styleDropdownOpen} setIsOpen={setStyleDropdownOpen}/>
+              <StyleSelector value={style} onChange={setStyle} isOpen={styleDropdownOpen} setIsOpen={setStyleDropdownOpen} />
 
               {/* Color Scheme Selector */}
-              <ColorSchemeSelector  value={colorSchemeId}onChange={setColorSchemeId}/>
+              <ColorSchemeSelector value={colorSchemeId} onChange={setColorSchemeId} />
 
               {/* ADDITIONAL PROMPT */}
               <div className="space-y-2">
@@ -96,7 +97,13 @@ const Genrate = () => {
           </div>
 
           {/* RIGHT PREVIEW */}
-          {/* <div className="hidden lg:block rounded-2xl border border-white/10 bg-white/5" /> */}
+          <div>
+            <div className="p-6 rounded-2x1 bg-white/8 border border-white/10 shadow-x1">
+              <h2 className="text-lg font-semibold text-zinc-100 mb-4">Preview</h2>
+              <PreviewPanel thumbnail={thumbnail} isLoading={loading}
+                aspectRatio={aspectRatio} />
+            </div>
+          </div>
         </div>
       </main>
     </div>

@@ -30,7 +30,7 @@ const HeroSection = () => {
 
       {/* Announcement */}
       <motion.a
-        href="#"
+        href="/generate"
         className="
           group flex items-center gap-2
           rounded-full p-1 pr-3 mt-44
