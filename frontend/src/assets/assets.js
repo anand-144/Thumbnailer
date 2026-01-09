@@ -1,9 +1,20 @@
+// =========================
+// IMAGE IMPORTS
+// =========================
+
+import logo from "./logo.svg";
+import footerlogo from "./footer-logo.svg";
+
+import heroImg from "./hero-img.png";
+
+import features1 from "./features-showcase-1.png"
+import features2 from "./features-showcase-2.png"
+
 import thumb_1 from "./thumb_1.jpg";
 import thumb_2 from "./thumb_2.jpg";
 import thumb_3 from "./thumb_3.jpg";
 import thumb_4 from "./thumb_4.jpg";
 import thumb_5 from "./thumb_5.jpg";
-
 
 // =========================
 // CONSTANTS
@@ -18,6 +29,10 @@ export const thumbnailStyles = [
   "Illustrated",
   "Tech/Futuristic",
 ];
+
+// =========================
+// COLOR SCHEMES
+// =========================
 
 export const colorSchemes = [
   {
@@ -69,110 +84,54 @@ export const colorSchemes = [
 export const dummyThumbnails = [
   {
     _id: "69451ff3c9ea67e4c930f6a6",
-    userId: "6942b3bd2a93a220baa331b3",
     title: "Top smartwatch under 1499",
     style: "Bold & Graphic",
     aspect_ratio: "16:9",
     color_scheme: "vibrant",
-    text_overlay: true,
     image_url: thumb_1,
-    prompt_used: "add multiple smartwatches",
-    user_prompt: "add multiple smartwatches",
-    isGenerating: false,
-    createdAt: "2025-12-19T09:50:43.727Z",
-    updatedAt: "2025-12-19T09:51:07.874Z",
   },
   {
     _id: "69451d5bc9ea67e4c930f698",
-    userId: "6942b3bd2a93a220baa331b3",
     title: "Learn How to make 100k in 10 days",
     style: "Bold & Graphic",
     aspect_ratio: "16:9",
     color_scheme: "vibrant",
-    text_overlay: true,
     image_url: thumb_2,
-    prompt_used: "add cash images graph and etc",
-    user_prompt: "add cash images graph and etc",
-    isGenerating: false,
-    createdAt: "2025-12-19T09:39:39.971Z",
-    updatedAt: "2025-12-19T09:40:05.084Z",
   },
   {
     _id: "6943fb409fa048268a04f105",
-    userId: "6942b3bd2a93a220baa331b3",
     title: "Learn NextJS 16 with a Project",
     style: "Bold & Graphic",
     aspect_ratio: "16:9",
     color_scheme: "vibrant",
-    text_overlay: true,
     image_url: thumb_3,
-    prompt_used: "add human with laptop",
-    user_prompt: "add human with laptop",
-    isGenerating: false,
-    createdAt: "2025-12-18T13:01:52.205Z",
-    updatedAt: "2025-12-18T13:02:13.766Z",
   },
   {
     _id: "6943e8c763d3d5ec3e4f5c8c",
-    userId: "6942b3bd2a93a220baa331b3",
     title: "Learn how to use Photoshop",
     style: "Bold & Graphic",
     aspect_ratio: "16:9",
     color_scheme: "vibrant",
-    text_overlay: true,
     image_url: thumb_4,
-    isGenerating: false,
-    createdAt: "2025-12-18T11:43:03.281Z",
-    updatedAt: "2025-12-18T11:43:24.982Z",
   },
   {
     _id: "6943e2220611d25b40e529b3",
-    userId: "6942b3bd2a93a220baa331b3",
     title: "Make Burger in 30 min",
     style: "Photorealistic",
     aspect_ratio: "1:1",
     color_scheme: "vibrant",
-    text_overlay: true,
     image_url: thumb_5,
-    isGenerating: false,
-    createdAt: "2025-12-18T11:14:42.466Z",
-    updatedAt: "2025-12-18T11:15:04.260Z",
   },
 ];
 
 // =========================
-// HTML TEMPLATE
+// EXPORTS
 // =========================
 
-export const yt_html = `
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YouTube - Clone</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              yt: '#0f0f0f',
-              yt2: '#181818',
-              ytBorder: '#303030',
-            },
-          },
-        },
-      };
-    </script>
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-
-  <body class="dark bg-yt text-white font-sans">
-    <!-- SAME HTML AS YOU PROVIDED -->
-  </body>
-</html>
-`;
+export {
+  logo,
+  footerlogo,
+  heroImg,
+  features1,
+  features2,
+};

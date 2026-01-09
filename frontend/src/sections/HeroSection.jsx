@@ -4,6 +4,7 @@ import TiltedImage from "../components/TiltedImage";
 import { motion, AnimatePresence } from "motion/react";
 import { useNavigate } from 'react-router-dom'
 
+
 const HeroSection = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const modalRef = useRef(null);

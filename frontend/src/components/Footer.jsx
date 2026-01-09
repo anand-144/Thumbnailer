@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import {footerlogo} from '../assets/assets'
 
 const Footer = () => {
   return (
@@ -31,7 +32,7 @@ const Footer = () => {
         <Link to="/">
           <img
             className="size-10 aspect-square"
-            src="/assets/footer-logo.svg"
+            src={footerlogo}
             alt="Thumbnailer logo"
             width="32"
             height="32"

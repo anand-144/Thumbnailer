@@ -3,16 +3,16 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { navlinks } from "../data/navlinks";
 import { NavLink, useNavigate } from "react-router-dom";
+import {logo} from '../assets/assets'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
   const navigate = useNavigate();
 
-  // 🔐 Simple auth check
+
   const isLoggedIn = Boolean(localStorage.getItem("token"));
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
@@ -33,7 +33,7 @@ const Navbar = () => {
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
             <img
-              src="/assets/logo.svg"
+              src={logo}
               alt="Thumbnailer logo"
               className="h-9 w-auto"
             />

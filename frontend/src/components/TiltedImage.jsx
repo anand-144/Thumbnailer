@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
+import { heroImg } from "../assets/assets";
 
 const springValues = {
   damping: 30,
@@ -64,7 +65,7 @@ const TiltedImage = ({ rotateAmplitude = 3 }) => {
         style={{ rotateX, rotateY }}
       >
         <motion.img
-          src="/assets/hero-img.png"
+          src={heroImg}
           alt="hero section showcase"
           className="border-b bg-linear-180 from-rose-500 to-transparent p-1
             w-full rounded-[15px]

@@ -34,7 +34,7 @@ function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/about" element={<About />} />
-        <Route path="/generate/:id" element={<Genrate />} />
+        <Route path="/generate" element={<Genrate />} />
         <Route path="/my-generation" element={<MyGeneartion />} />
         <Route path="/preview" element={<Preview/>} />
 

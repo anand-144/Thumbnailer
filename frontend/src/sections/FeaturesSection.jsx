@@ -2,6 +2,7 @@ import SectionTitle from "../components/SectionTitle";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { featuresData } from "../data/feature";
+import {features1 ,features2} from '../assets/assets'
 
 const FeaturesSection = () => {
   return (
@@ -85,7 +86,7 @@ const FeaturesSection = () => {
           >
             <img
               className="h-full w-full object-cover"
-              src="/assets/features-showcase-1.png"
+              src={features1}
               alt="AI thumbnail generation showcase"
             />
           </motion.div>
@@ -105,7 +106,7 @@ const FeaturesSection = () => {
             }}
           >
             <img
-              src="/assets/features-showcase-2.png"
+              src={features2}
               alt="high CTR thumbnail preview"
               className="
                 rounded-xl
