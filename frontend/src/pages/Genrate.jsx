@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import AspectRatio from "../components/AspectRatio";
 import StyleSelector from "../components/StyleSelector";
 import { colorSchemes } from "../assets/assets";
+import ColorSchemeSelector from "../components/ColorSchemeSelector";
 
 const Genrate = () => {
   const { id } = useParams();
@@ -63,6 +64,7 @@ const Genrate = () => {
               <StyleSelector value={style} onChange={setStyle} isOpen={styleDropdownOpen} setIsOpen={setStyleDropdownOpen}/>
 
               {/* Color Scheme Selector */}
+              <ColorSchemeSelector  value={colorSchemeId}onChange={setColorSchemeId}/>
 
               {/* ADDITIONAL PROMPT */}
               <div className="space-y-2">
